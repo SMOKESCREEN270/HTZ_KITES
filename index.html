@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTZ Kites – Global Flight!</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1e90ff;       /* Sky blue */
+      --secondary: #ff8c00;     /* Kite orange */
+      --accent: #ffde00;        /* Kite yellow */
+      --bg-light: #f0f8ff;      /* Alice blue sky */
+      --bg-dark: #111;
+      --text-dark: #222;
+      --text-light: #f4f4f4;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--text-dark);
+      background: var(--bg-light);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    a { color: inherit; text-decoration: none; }
+    header {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background: var(--bg-light);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 1rem 2%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+    .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary); }
+    nav a {
+      margin-left: 1.5rem;
+      font-weight: 500;
+      transition: color .3s;
+    }
+    nav a:hover { color: var(--secondary); }
+    .hero {
+      width: 100%;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--text-light);
+      text-align: center;
+      padding: 8rem 2% 6rem;
+    }
+    .hero h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+    .hero p { font-size: 1.3rem; margin-bottom: 2rem; font-weight: 300; }
+    .btn {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      border: 2px solid var(--accent);
+      background: var(--accent);
+      color: var(--bg-dark);
+      font-weight: 600;
+      border-radius: 50px;
+      transition: background .4s, color .4s, transform .4s;
+      cursor: pointer;
+      text-align: center;
+    }
+    .btn:hover {
+      background: var(--secondary);
+      border-color: var(--secondary);
+      color: var(--text-light);
+      transform: scale(1.1);
+    }
+    section {
+      padding: 4rem 5%;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 { margin-bottom: 1rem; color: var(--primary); }
+    ul { list-style: none; margin-left: 0; padding-left: 0; }
+    ul li { margin-bottom: 0.75rem; font-size: 1rem; }
+    .highlight { color: var(--secondary); font-weight: 700; }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .6s ease-out, transform .6s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: none;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+    .card {
+      flex: 1 1 280px;
+      background: #fff;
+      border: 2px solid var(--primary);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      transition: transform .3s, box-shadow .3s;
+      padding: 1rem;
+    }
+    .card-content img {
+      width: 100%; height: auto;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    .card h3 { margin-bottom: .5rem; color: var(--secondary); }
+    .card p { font-size: .95rem; }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    }
+    footer {
+      margin-top: auto;
+      background: var(--primary);
+      color: var(--text-light);
+      text-align: center;
+      padding: 2rem 2%;
+    }
+    footer a {
+      color: var(--accent);
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">HTZ Kites</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#features">Why Us</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>HTZ Kites</h1>
+    <p>Soaring Beyond Boundaries – From Kolkata to the World!</p>
+    <div class="btn" data-target="#about">Discover Our Story</div>
+  </section>
+
+  <section id="about" class="fade-in">
+    <h2>About HTZ Kites</h2>
+    <p>At HTZ Kites, we combine <span class="highlight">traditional craftsmanship</span> with <span class="highlight">modern innovation</span> to create high-performance kites. Based in Kolkata, we’re dedicated to bringing premium, vibrant kites to sky enthusiasts globally.</p>
+  </section>
+
+  <section id="features" class="fade-in">
+    <h2>Why Choose HTZ Kites?</h2>
+    <ul>
+      <li><strong>Professional Craftsmanship:</strong> Handcrafted by skilled artisans using <span class="highlight">premium</span> materials.</li>
+      <li><strong>Innovative Aerodynamics:</strong> Streamlined designs for <span class="highlight">stable flight</span> in any wind.</li>
+      <li><strong>Eco-Friendly:</strong> Sustainable fabrics and biodegradable strings for a <span class="highlight">greener</span> footprint.</li>
+      <li><strong>Global Reach:</strong> Worldwide shipping—delivered on time, every time.</li>
+      <li><strong>Festival Editions:</strong> Custom series that <span class="highlight">captivate</span> and stand out during celebrations.</li>
+    </ul>
+    <div class="btn" data-target="#products">Explore Collection</div>
+  </section>
+
+  <section id="products" class="fade-in">
+    <h2>Our Kite Collection</h2>
+    <div class="cards">
+      <div class="card fade-in">
+        <div class="card-content">
+          <img src="https://via.placeholder.com/400x250?text=Diamond+Kite" alt="Diamond Kite">
+          <h3>Diamond Kite</h3>
+          <p>Classic diamond shape with vibrant prints—perfect for learning and celebrations.</p>
+        </div>
+      </div>
+      <div class="card fade-in">
+        <div class="card-content">
+          <img src="https://via.placeholder.com/400x250?text=Delta+Kite" alt="Delta Kite">
+          <h3>Delta Kite</h3>
+          <p>Aerodynamic delta design for <span class="highlight">smooth acrobatics</span> and stability.</p>
+        </div>
+      </div>
+      <div class="card fade-in">
+        <div class="card-content">
+          <img src="https://via.placeholder.com/400x250?text=Box+Kite" alt="Box Kite">
+          <h3>Box Kite</h3>
+          <p>3D structure that climbs higher with every gust—an <span class="highlight">aerial marvel</span>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="fade-in">
+    <h2>Get in Touch</h2>
+    <p>Ready to fly higher? Contact us today to start your HTZ adventure!</p>
+    <p>Email: <a href="mailto:info@htzkites.com">info@htzkites.com</a></p>
+    <p>Phone: <a href="tel:+911234567890">+91 12345 67890</a></p>
+  </section>
+
+  <footer>
+    <p>Visit our workshop: <a href="https://www.google.com/maps/search/?api=1&query=HTZ+Kites+Kolkata" target="_blank">HTZ Kites, Kolkata, India</a></p>
+    <p>&copy; 2025 HTZ Kites. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('[data-target]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelector(btn.getAttribute('data-target')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
